@@ -1,0 +1,175 @@
+/* --- Global Styles & Setup --- */
+:root {
+    --primary-color: #00e0ff; /* Electric Blue Accent */
+    --background-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --card-bg: #292929;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- Header & Navigation --- */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: #111;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.main-nav h1 {
+    font-size: 1.8em;
+    color: var(--primary-color);
+}
+
+.main-nav nav a {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.subscribe-btn {
+    background-color: var(--primary-color);
+    color: #111;
+    border: none;
+    padding: 8px 15px;
+    margin-left: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: url('placeholder-hero.jpg') center/cover no-repeat; /* Replace 'placeholder-hero.jpg' with a tech image */
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay for readability */
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #111;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #00b3cc;
+    text-decoration: none;
+}
+
+/* --- Review Cards --- */
+.featured-reviews {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.featured-reviews h3 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.review-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: inline-block; /* To allow multiple cards side-by-side (on desktop) */
+    width: 300px;
+    margin: 15px;
+}
+
+.product-image {
+    width: 100%;
+    height: 180px;
+    background-color: #555; /* Placeholder color */
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.score-card {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+.read-more {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #111;
+    padding: 20px 5%;
+    text-align: center;
+    border-top: 1px solid #333;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #ccc;
+    margin: 0 5px;
+}
+
+/* --- Responsive Design (Crucial for mobile) --- */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+    }
+
+    .main-nav nav {
+        margin-top: 15px;
+    }
+
+    .main-nav nav a, .subscribe-btn {
+        margin: 0 10px;
+    }
+
+    .hero-content h2 {
+        font-size: 2em;
+    }
+
+    .review-card {
+        width: 90%;
+        margin: 15px auto;
+    }
+}

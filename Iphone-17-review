@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review: iPhone 17 Pro - The Price of Minimal Change | Tech Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* (CSS styles for review pages are omitted here but assumed to be in style.css or a <style> block) */
+        .review-content { max-width: 900px; margin: 0 auto; padding: 20px 5%; }
+        .review-header { text-align: center; margin-bottom: 30px; }
+        .review-header h1 { font-size: 2.5em; color: var(--primary-color); margin-bottom: 10px; }
+        .score-box { background-color: #3a3a3a; padding: 20px; border-radius: 8px; margin: 30px 0; display: flex; justify-content: space-around; }
+        .score-box h4 { margin-bottom: 10px; color: var(--primary-color); }
+        .final-score { font-size: 3em; font-weight: bold; }
+        .pros-cons { display: flex; justify-content: space-between; margin: 20px 0; }
+        .pros-cons ul { list-style: none; padding: 0; }
+        .pros-cons li::before { margin-right: 10px; font-weight: bold; }
+        .pros-cons .pros li::before { content: '✅'; color: green; }
+        .pros-cons .cons li::before { content: '❌'; color: red; }
+        .affiliate-cta { background-color: #444; text-align: center; padding: 20px; border-radius: 8px; margin: 40px 0; }
+        .affiliate-btn { background-color: green; color: white; padding: 15px 30px; border-radius: 5px; font-size: 1.2em; font-weight: bold; display: inline-block; }
+        .author-box { border-top: 2px solid #333; padding-top: 20px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <header class="main-nav">...</header> 
+    
+    <div class="review-content">
+        <div class="review-header">
+            <p>Flagship Smartphone Review - September 2025</p>
+            <h1>The iPhone 17 Pro: Still Great, Still Overpriced.</h1>
+        </div>
+
+        <img src="placeholder.jpg" alt="iPhone 17 Pro large photo" style="width: 100%; border-radius: 8px; margin-bottom: 20px;">
+
+        <div class="score-box">
+            <div>
+                <h4>Overall Score</h4>
+                <div class="final-score">8.8/10</div>
+            </div>
+            <div>
+                <h4>Key Metrics</h4>
+                <p>Performance: 9.9</p>
+                <p>Innovation: 7.5</p>
+                <p>Value: 6.0</p>
+            </div>
+        </div>
+
+        <div class="pros-cons">
+            <div class="pros">
+                <h4>PROS</h4>
+                <ul>
+                    <li>The **A19 Bionic Chip** is undeniably the fastest mobile processor ever.</li>
+                    <li>Slightly improved battery life addresses past complaints.</li>
+                    <li>iOS ecosystem integration remains unmatched.</li>
+                    <li>New **5x Telephoto** sensor is sharp and versatile.</li>
+                </ul>
+            </div>
+            <div class="cons">
+                <h4>CONS</h4>
+                <ul>
+                    <li>**The same design** for the fourth year in a row.</li>
+                    <li>ProMotion display refresh rate still locked at a maximum of 120Hz.</li>
+                    <li>**Base storage is still too low** for the Pro price tier.</li>
+                    <li>Lacks true, differentiating AI features compared to competitors.</li>
+                </ul>
+            </div>
+        </div>
+
+        <p>The iPhone 17 Pro is an objectively excellent smartphone. It’s built perfectly, the software is fluid, and the **A19 chip** feels like overkill—in a good way. The problem, as it is every year, is context. For the average consumer upgrading from an iPhone 15, there is simply **not enough fundamental change** to justify the high cost.</p>
+        
+        <h2>The Camera: Refinement, Not Revolution</h2>
+        <p>Apple continues its strategy of minor, predictable hardware bumps. The camera system is fantastic, particularly the new telephoto lens which finally brings it to parity with Android flagships. However, the much-anticipated **computational photography** overhaul remains on the backburner, leaving the door open for Google and Samsung to lead on innovative use of AI in imaging.</p>
+        
+        <h2>The Elephant in the Room: Value</h2>
+        <p>This is where the criticism hits hardest. The starting price, now flirting with the $1,100 mark, delivers a measly 128GB of base storage in many regions. In a world where rivals offer double the storage and higher refresh rates for less, the **iPhone 17 Pro is primarily a status symbol**, and only secondarily a technological leap.</p>
+
+        <div class="affiliate-cta">
+            <p>Need the fastest chip available? You know where to find it.</p>
+            <a href="YOUR_AFFILIATE_LINK" class="affiliate-btn">Buy The iPhone 17 Pro →</a>
+        </div>
+
+        <div class="author-box">
+            <p><strong>Reviewer: Alex Techman</strong></p>
+            <p>Alex has been reviewing gadgets for 10 years and specializes in smartphone and camera technology.</p>
+        </div>
+    </div>
+
+    <footer>...</footer> 
+    <script src="script.js"></script>
+</body>
+</html>
