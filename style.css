@@ -1,4 +1,7 @@
-/* --- Global Styles & Setup --- */
+/* ======================================= */
+/* --- 1. GLOBAL STYLES & DARK THEME (For Homepage: index.html) --- */
+/* ======================================= */
+
 :root {
     --primary-color: #00e0ff; /* Electric Blue Accent */
     --background-color: #1a1a1a;
@@ -28,7 +31,14 @@ a:hover {
     text-decoration: underline;
 }
 
-/* --- Header & Navigation --- */
+/* Reusable Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Header & Navigation (Used on index.html) --- */
 .main-nav {
     display: flex;
     justify-content: space-between;
@@ -59,15 +69,15 @@ a:hover {
     border-radius: 5px;
 }
 
-/* --- Hero Section --- */
+/* --- Hero Section (Used on index.html) --- */
 .hero {
-    background: url('placeholder-hero.jpg') center/cover no-repeat; /* Replace 'placeholder-hero.jpg' with a tech image */
+    background: url('placeholder-hero.jpg') center/cover no-repeat;
     height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Overlay for readability */
+    background-color: rgba(0, 0, 0, 0.5); 
     color: white;
 }
 
@@ -93,7 +103,7 @@ a:hover {
     text-decoration: none;
 }
 
-/* --- Review Cards --- */
+/* --- Review Cards (Used on index.html) --- */
 .featured-reviews {
     padding: 40px 5%;
     text-align: center;
@@ -110,7 +120,7 @@ a:hover {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    display: inline-block; /* To allow multiple cards side-by-side (on desktop) */
+    display: inline-block; 
     width: 300px;
     margin: 15px;
 }
@@ -118,7 +128,7 @@ a:hover {
 .product-image {
     width: 100%;
     height: 180px;
-    background-color: #555; /* Placeholder color */
+    background-color: #555; 
     border-radius: 4px;
     margin-bottom: 15px;
 }
@@ -136,7 +146,7 @@ a:hover {
     font-weight: bold;
 }
 
-/* --- Footer --- */
+/* --- Footer (Used on index.html) --- */
 footer {
     background-color: #111;
     padding: 20px 5%;
@@ -150,26 +160,222 @@ footer a {
     margin: 0 5px;
 }
 
-/* --- Responsive Design (Crucial for mobile) --- */
+/* ---------------------------------------------------- */
+/* ==================================================== */
+/* --- 2. LIGHT THEME (For Detailed Review Page: smart-ring-review.html) --- */
+/* (NOTE: Requires <body class="review-page"> in the HTML) */
+/* ==================================================== */
+
+.review-page {
+    /* OVERRIDE GLOBAL BODY/TEXT COLORS FOR LIGHT THEME */
+    background-color: #f4f7f9; /* Light background */
+    color: #333; /* Dark text */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* HEADER: OVERRIDE THE DARK THEME NAVIGATION */
+.review-page header {
+    background-color: #2c3e50; /* Dark Blue */
+    color: white;
+    padding: 15px 0;
+    border-bottom: 5px solid #e74c3c; /* Red accent */
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+}
+.review-page header h1 {
+    color: white; 
+    font-size: 1.8em;
+}
+.review-page header nav {
+    float: none;
+    padding-top: 0;
+}
+.review-page header nav a {
+    color: white;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.review-page header nav a:hover {
+    color: #e74c3c;
+}
+
+/* REVIEW LAYOUT AND CONTAINER STYLES */
+.review-page .review-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+.review-page .review-title {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+.review-page .section-verdict, 
+.review-page .section-deep-dive {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Summary Box & Scores --- */
+.review-page .summary-box {
+    display: flex;
+    gap: 30px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.review-page .score-card {
+    text-align: center;
+    border-right: 1px solid #eee;
+    padding-right: 30px;
+}
+.review-page .score-label {
+    font-weight: bold;
+    color: #e74c3c;
+    margin: 0;
+}
+.review-page .overall-score {
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #2c3e50;
+    line-height: 1.1;
+}
+.review-page .overall-score span {
+    font-size: 0.5em;
+    font-weight: normal;
+    color: #777;
+}
+
+.review-page .star-rating .fas {
+    color: #ccc;
+    font-size: 1.5em;
+}
+.review-page .star-rating .filled {
+    color: #f39c12; /* Gold/Yellow for filled stars */
+}
+
+.review-page .score-breakdown {
+    flex-grow: 1;
+    padding-left: 10px;
+}
+.review-page .score-breakdown p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 5px;
+}
+.review-page .score-breakdown p:last-child {
+    border-bottom: none;
+}
+
+/* --- Section Styling --- */
+.review-page section h3 {
+    color: #e74c3c;
+    border-left: 4px solid #e74c3c;
+    padding-left: 10px;
+    font-size: 1.6em;
+    margin-top: 30px;
+}
+.review-page section h4 {
+    color: #2c3e50;
+    font-size: 1.3em;
+    margin-top: 25px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+.review-page .section-deep-dive ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding-left: 0;
+    color: #444; 
+}
+
+/* --- Specs Table --- */
+.review-page .specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.review-page .specs-table th, .review-page .specs-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.review-page .specs-table th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: bold;
+}
+.review-page .specs-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.review-page .specs-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* FOOTER: OVERRIDE THE DARK THEME FOOTER */
+.review-page footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #34495e; 
+    color: white;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* --- Responsive Design (Shared and Specific) --- */
 @media (max-width: 768px) {
+    /* Homepage (index.html) responsive styles */
     .main-nav {
         flex-direction: column;
     }
-
     .main-nav nav {
         margin-top: 15px;
     }
-
     .main-nav nav a, .subscribe-btn {
         margin: 0 10px;
     }
-
     .hero-content h2 {
         font-size: 2em;
     }
-
     .review-card {
         width: 90%;
         margin: 15px auto;
+    }
+
+    /* Review Page (smart-ring-review.html) responsive styles */
+    .review-page .summary-box {
+        flex-direction: column;
+    }
+    .review-page .score-card {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        padding-right: 0;
+    }
+    .review-page header {
+        flex-direction: column;
+    }
+    .review-page header nav {
+        margin-top: 10px;
+    }
+    .review-page header nav a {
+        margin: 0 10px;
     }
 }
